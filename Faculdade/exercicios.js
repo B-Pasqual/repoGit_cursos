@@ -1,6 +1,6 @@
 //! O programa deve escolher um número aleatório entre 1 e 100, informar para o usuário qual foi o número sorteado e também, se ele escolheu corretamente entre ser Par ou Ímpar.
 
-/*  let randomNumber = Math.floor(Math.random() * 100) + 1;
+/* let randomNumber = Math.floor(Math.random() * 100) + 1;
 const escolha = prompt('O número será par ou impar ?');
 const temp = randomNumber % 2 == 0 ? 'par' : 'impar';
 
@@ -10,11 +10,11 @@ temp == escolha
     )
   : alert(
       `Numero: ${randomNumber}\nÉ: ${temp}\nPalpite: ${escolha}\nQue pena, você errou!`
-    );
+    ); */
 
 // todo ou
 
-let randomNumber = Math.floor(Math.random() * 100) + 1;
+/* let randomNumber = Math.floor(Math.random() * 100) + 1;
 const escolha = prompt('O número será par ou impar ?');
 const temp = randomNumber % 2 == 0 ? 'par' : 'impar';
 temp == escolha ? alert('Você acertou!') : alert('Você errou!'); */
@@ -25,6 +25,7 @@ temp == escolha ? alert('Você acertou!') : alert('Você errou!'); */
    1 - papel
    2 - tesoura */
 /* 
+
 let jogador = Number(
   prompt(
     `Escolha um número correspondente:\nPedra [0]\n Papel [1]\n Tesoura [2]`
@@ -58,7 +59,7 @@ if (computador == jogador) {
 }
  */
 
-//! Passo a passo para fazer café, possibilidade de escolha em qual passo se deseja iniciar
+/* //! Passo a passo para fazer café, possibilidade de escolha em qual passo se deseja iniciar
 
 let start = prompt(`Entre  1 e 8, de qual passo você deseja iniciar?`);
 
@@ -89,4 +90,63 @@ switch (start) {
 
   default:
     alert('Você digitou um valor inválido');
+
+    //
 }
+ */
+
+//!Exemplo do Leo com ternary operator
+
+/* let m1 = 0;
+let m2 = 0;
+let invalido = 0;
+let vote;
+
+while (true) {
+  let vote = Number(prompt('Digite um número'));
+  if (vote == 0) break;
+  vote == 1
+    ? m1++
+    : vote == 2
+    ? m2++
+    : vote != 1 && vote != 2
+    ? invalido++
+    : '';
+}
+
+alert(`Votos: \n\nRobo: ${m1}\n Macaco: ${m2}\n Invalidos: ${invalido}`); */
+
+/* while (vote != 0) {
+  let vote = Number(prompt('Digite um número'));
+  if (Number.isInteger(vote)) {
+    vote == 1
+      ? m1++
+      : vote == 2
+      ? m2++
+      : vote != 1 && vote != 2
+      ? invalido++
+      : '';
+  } else {
+    break;
+  }
+}
+
+console.log(m1);
+console.log(m2);
+console.log(invalido);
+ */
+
+//! Short circuiting  ---------------------------
+
+/* let numero = prompt('Digite um número');
+// let numero = Number(prompt('Digite um número'));
+console.log(typeof numero == 'number' || alert('A variável não é um número'));
+console.log(typeof numero);
+ */
+[quantidadeEstoque, price, valorDisponivel, valorTotal] = [5, 10, 200, 50];
+console.log(
+  valorDisponivel != 0 &&
+    quantidadeEstoque != 0 &&
+    valorTotal < valorDisponivel &&
+    'Todas condições foram atendidas, continuando a compra...'
+);
