@@ -97,7 +97,7 @@ switch (start) {
 
 //!Exemplo do Leo com ternary operator
 
-/* let m1 = 0;
+ let m1 = 0;
 let m2 = 0;
 let invalido = 0;
 let vote;
