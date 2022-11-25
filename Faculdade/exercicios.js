@@ -97,7 +97,7 @@ switch (start) {
 
 //!Exemplo do Leo com ternary operator
 
- let m1 = 0;
+/* let m1 = 0;
 let m2 = 0;
 let invalido = 0;
 let vote;
@@ -114,8 +114,8 @@ while (true) {
     : '';
 }
 
-alert(`Votos: \n\nRobo: ${m1}\n Macaco: ${m2}\n Invalidos: ${invalido}`); */
-
+alert(`Votos: \n\nRobo: ${m1}\n Macaco: ${m2}\n Invalidos: ${invalido}`);
+ */
 /* while (vote != 0) {
   let vote = Number(prompt('Digite um número'));
   if (Number.isInteger(vote)) {
@@ -143,10 +143,57 @@ console.log(invalido);
 console.log(typeof numero == 'number' || alert('A variável não é um número'));
 console.log(typeof numero);
  */
-[quantidadeEstoque, price, valorDisponivel, valorTotal] = [5, 10, 200, 50];
+/* [quantidadeEstoque, price, valorDisponivel, valorTotal] = [5, 10, 200, 50];
 console.log(
   valorDisponivel != 0 &&
     quantidadeEstoque != 0 &&
     valorTotal < valorDisponivel &&
     'Todas condições foram atendidas, continuando a compra...'
+); */
+
+//! Escolha dos pilotos ---------------------------------------------------
+//                0         1         2          3         4         5
+/* const nomes = ['slider', 'jester', 'stinger', 'goose', 'iceman', 'maverick'];
+const velocidades = [75, 89, 76, 75, 98, 90];
+
+// Recebendo a escolha do jogador através de uma entrada com prompt
+escolhaJogador = Number(
+  prompt(
+    `[0] - slider\n[1] - jester\n[2] - stinger\n[3] - goose\n[4] - iceman\n[5] - maverick\n\nEscolha um número com base no piloto desejado:`
+  )
 );
+
+//gerando a escolha do computador
+escolhaComputador = Math.trunc(Math.random() * nomes.length);
+
+!--- Ambas as escolha irão gerar números que irão ser utilizados para interar dentro dos arrays e atribuir os valores para as variáveis abaixo. ---
+
+// Atribuindo variáveis aos seus valores com o uso do 'array destructuring'
+
+[pilotoJogador, velocidadeJogador, pilotoComputador, velocidadeComputador] = [
+  nomes[escolhaJogador],
+  velocidades[escolhaJogador],
+  nomes[escolhaComputador],
+  velocidades[escolhaComputador],
+];
+
+// base da mensagem de saída, para não precisar ficar escrevendo toda hora nas 3 condições.
+
+let mensagem = `Jogador: \nPiloto: ${pilotoJogador}\nVelocidade: ${velocidadeJogador}\n\nComputador:\nPiloto:${pilotoComputador}\nVelocidade:${velocidadeComputador}`;
+
+//Condicional que compara as velocidades dos pilotos selecionados e da a saída correspondente.
+
+if (velocidadeJogador == velocidadeComputador) {
+  console.log(
+    `${mensagem}\n\nAmbos os pilotos escolhidos pelo jogador e pelo computador possuem a mesma velocidade\nEmpate !`
+  );
+} else if (velocidadeJogador > velocidadeComputador) {
+  console.log(
+    `${mensagem}\n\nO piloto escolhido pelo jogador possui uma velocidade maior\nVitória Jogador! .`
+  );
+} else {
+  console.log(
+    `${mensagem}\n\nO piloto escolhido pelo computador possui uma velocidade maior\nVitória Computador!`
+  );
+}
+ */
