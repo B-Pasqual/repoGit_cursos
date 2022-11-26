@@ -70,7 +70,7 @@ console.log(newRestaurant);
 // const [a, b, ...others] = [1, 2, 3, 4, 5, 6, 7, 8];
 // console.log(others);
 
-const add = function (...numbers) {
+/* const add = function (...numbers) {
   let sum = 0;
   for (i of numbers) sum += i;
   console.log(sum);
@@ -79,7 +79,14 @@ const add = function (...numbers) {
 add(2, 3);
 add(5, 3, 7, 2);
 const x = [23, 5, 7];
-add(...x);
+add(...x); */
 
 //Utilizando no método
 // restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+
+// console.log(restaurant.openingHours.sat?.open);
+const x = 21;
+// console.log((isNaN(x) && `X não é um número`) || isNaN(x) || `X  é um número`);
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
+console.log(restaurant.numGuests);

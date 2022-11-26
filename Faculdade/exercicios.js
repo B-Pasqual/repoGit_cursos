@@ -153,7 +153,7 @@ console.log(
 
 //! Escolha dos pilotos ---------------------------------------------------
 //                0         1         2          3         4         5
-/* const nomes = ['slider', 'jester', 'stinger', 'goose', 'iceman', 'maverick'];
+const nomes = ['slider', 'jester', 'stinger', 'goose', 'iceman', 'maverick'];
 const velocidades = [75, 89, 76, 75, 98, 90];
 
 // Recebendo a escolha do jogador através de uma entrada com prompt
@@ -166,7 +166,7 @@ escolhaJogador = Number(
 //gerando a escolha do computador
 escolhaComputador = Math.trunc(Math.random() * nomes.length);
 
-!--- Ambas as escolha irão gerar números que irão ser utilizados para interar dentro dos arrays e atribuir os valores para as variáveis abaixo. ---
+// !--- Ambas as escolha irão gerar números que irão ser utilizados para interar dentro dos arrays e atribuir os valores para as variáveis abaixo. ---
 
 // Atribuindo variáveis aos seus valores com o uso do 'array destructuring'
 
@@ -196,4 +196,3 @@ if (velocidadeJogador == velocidadeComputador) {
     `${mensagem}\n\nO piloto escolhido pelo computador possui uma velocidade maior\nVitória Computador!`
   );
 }
- */
