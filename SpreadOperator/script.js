@@ -81,12 +81,49 @@ add(5, 3, 7, 2);
 const x = [23, 5, 7];
 add(...x); */
 
-//Utilizando no método
+//todo Utilizando no método ---
 // restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 
-// console.log(restaurant.openingHours.sat?.open);
+//! Nulish operator
+
+/* // console.log(restaurant.openingHours.sat?.open);
 const x = 21;
 // console.log((isNaN(x) && `X não é um número`) || isNaN(x) || `X  é um número`);
 const guestCorrect = restaurant.numGuests ?? 10;
 console.log(guestCorrect);
 console.log(restaurant.numGuests);
+ */
+//! Looping Objects: Object keys , values and entries. ------------------------
+
+//todo array.keys()
+//Nos devolve um array com as chaves dentro do objeto, ou seja, o nome de cada propriedade seja ela uma
+
+const properties = Object.keys(restaurant.openingHours);
+console.log(properties);
+
+//todo array.entries()
+// Torna possível que trabalhemos com 2 valores, o primeiro sendo referente ao INDEX do array, já o segundo ao valor daquela posição.
+
+//Printing in each day the restaurant opens
+let openString = `We are open in the following days: `;
+for ([index, day] of properties.entries()) {
+  index == 2 ? (openString += `${day}. `) : (openString += `${day}, `);
+  console.log(openString);
+  console.log(index);
+}
+
+cliente1 = {
+  carro: {
+    modelo: 'Voyage',
+    ano: 2013,
+  },
+  cliente: {
+    nome: 'Amanda',
+    idade: 25,
+  },
+};
+
+const information = Object.keys(cliente1);
+console.log(
+  `Essa são as informações sobre ${cliente1.cliente.nome}\n${information}`
+);
