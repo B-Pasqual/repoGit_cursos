@@ -98,8 +98,12 @@ console.log(restaurant.numGuests);
 //todo Object.keys()
 //Nos devolve um array com as chaves dentro do OBJETO, ou seja, o nome de cada propriedade
 
-const properties = Object.keys(restaurant.openingHours);
+const properties = Object.entries(restaurant.openingHours);
 console.log(properties);
+
+for ([key, { open, close }] of properties) {
+  console.log(key, open, close);
+}
 
 //todo Object.entries()
 // Torna possível que trabalhemos com 2 valores, o primeiro sendo referente ao INDEX do array, já o segundo ao valor daquela posição.
@@ -115,12 +119,12 @@ for ([index, day] of properties.entries()) {
   console.log(index);
 }
  */
-const properties2 = Object.entries(restaurant.openingHours);
+/* const properties2 = Object.entries(restaurant.openingHours);
 console.log(properties2);
 for (let [key, { open, close }] of properties2) {
-  console.log(key, open, close);
+  console.log(key, ' open:', open, ' close:', close);
 }
-
+ */
 //Exemplo 2
 /* cliente1 = {
   carro: {
