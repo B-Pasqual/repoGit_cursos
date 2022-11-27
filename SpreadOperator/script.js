@@ -95,24 +95,34 @@ console.log(restaurant.numGuests);
  */
 //! Looping Objects: Object keys , values and entries. ------------------------
 
-//todo array.keys()
-//Nos devolve um array com as chaves dentro do objeto, ou seja, o nome de cada propriedade seja ela uma
+//todo Object.keys()
+//Nos devolve um array com as chaves dentro do OBJETO, ou seja, o nome de cada propriedade
 
 const properties = Object.keys(restaurant.openingHours);
 console.log(properties);
 
-//todo array.entries()
+//todo Object.entries()
 // Torna possível que trabalhemos com 2 valores, o primeiro sendo referente ao INDEX do array, já o segundo ao valor daquela posição.
 
 //Printing in each day the restaurant opens
-let openString = `We are open in the following days: `;
+
+/* let openString = `We are open in the following days: `;
 for ([index, day] of properties.entries()) {
-  index == 2 ? (openString += `${day}. `) : (openString += `${day}, `);
+  index == properties.length - 1
+    ? (openString += `${day}. `)
+    : (openString += `${day}, `);
   console.log(openString);
   console.log(index);
 }
+ */
+const properties2 = Object.entries(restaurant.openingHours);
+console.log(properties2);
+for (let [key, { open, close }] of properties2) {
+  console.log(key, open, close);
+}
 
-cliente1 = {
+//Exemplo 2
+/* cliente1 = {
   carro: {
     modelo: 'Voyage',
     ano: 2013,
@@ -127,3 +137,7 @@ const information = Object.keys(cliente1);
 console.log(
   `Essa são as informações sobre ${cliente1.cliente.nome}\n${information}`
 );
+for ([index, nomeChave] of information.entries()) {
+  console.log(index, nomeChave);
+}
+ */
