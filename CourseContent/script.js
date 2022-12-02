@@ -97,14 +97,14 @@ console.log(restaurant.numGuests);
 
 //todo Object.keys()
 //Nos devolve um array com as chaves dentro do OBJETO, ou seja, o nome de cada propriedade
-
+/* 
 const properties = Object.entries(restaurant.openingHours);
 console.log(properties);
 
 for ([key, { open, close }] of properties) {
   console.log(key, open, close);
 }
-
+ */
 //todo Object.entries()
 // Torna possível que trabalhemos com 2 valores, o primeiro sendo referente ao INDEX do array, já o segundo ao valor daquela posição.
 
@@ -145,3 +145,41 @@ for ([index, nomeChave] of information.entries()) {
   console.log(index, nomeChave);
 }
  */
+
+//! Sets -------------------------------------
+//Exemplo 1
+const orderSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(orderSet);
+
+//Exemplo 2
+const staffObject = {};
+let staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+let staffUnique = new Set(staff);
+// staffUnique.add('Delivery guy');
+// console.log(staffUnique);
+// console.log(staffUnique.size);
+console.log(staffUnique.has('Manager'));
+
+//! Estrutura de dados map() ------------------------
+
+//Exemplo 1
+
+const pessoas = [
+  { id: 3, nome: 'Luiz' },
+  { id: 2, nome: 'Maria' },
+  { id: 1, nome: 'Helena' },
+];
+
+const novasPessoas = {};
+for ({ nome, id } of pessoas) {
+  novasPessoas[id] = { id, nome };
+}
+
+console.log(novasPessoas);

@@ -59,41 +59,46 @@ if (computador == jogador) {
 }
  */
 
-/* //! Passo a passo para fazer café, possibilidade de escolha em qual passo se deseja iniciar
+//! Passo a passo para fazer café, possibilidade de escolha em qual passo se deseja iniciar
 
-let start = prompt(`Entre  1 e 8, de qual passo você deseja iniciar?`);
+/* //Declarando a função que será utilizada
+function fazCafe() {
+  let start = prompt(`Entre  1 e 8, de qual passo você deseja iniciar?`);
 
-switch (start) {
-  case '1':
-    alert('[Passo 1] Primeiramente, coloque a água para ferver;');
-  case '2':
-    alert('[Passo 2] Enquanto isso, pegue o coador de café e o filtro;');
-  case '3':
-    alert(
-      '[Passo 3] Coloque o filtro no coador e posicione o mesmo em cima da garrafa térmica;'
-    );
-  case '4':
-    alert('[Passo 4] Adicione o pó de café no filtro;');
-  case '5':
-    alert(
-      '[Passo 5] Então, quando a água estiver pronta, coloque ela aos poucos no no coador;'
-    );
-  case '6':
-    alert('[Passo 6] Quando já tiver utilizado toda a água;');
-  case '7':
-    alert('[Passo 7] Seu café está pronto');
-  case '8':
-    alert(
-      '[Passo 8] E se preferir, adicione o açúcar ou adoçante a gosto para finalizar.'
-    );
-    break;
+  switch (start) {
+    case '1':
+      alert('[Passo 1] Primeiramente, coloque a água para ferver;');
+    case '2':
+      alert('[Passo 2] Enquanto isso, pegue o coador de café e o filtro;');
+    case '3':
+      alert(
+        '[Passo 3] Coloque o filtro no coador e posicione o mesmo em cima da garrafa térmica;'
+      );
+    case '4':
+      alert('[Passo 4] Adicione o pó de café no filtro;');
+    case '5':
+      alert(
+        '[Passo 5] Então, quando a água estiver pronta, coloque ela aos poucos no no coador;'
+      );
+    case '6':
+      alert('[Passo 6] Quando já tiver utilizado toda a água;');
+    case '7':
+      alert('[Passo 7] Seu café está pronto');
+    case '8':
+      alert(
+        '[Passo 8] E se preferir, adicione o açúcar ou adoçante a gosto para finalizar.'
+      );
+      break;
 
-  default:
-    alert('Você digitou um valor inválido');
-
-    //
+    default:
+      alert('Você digitou um valor inválido');
+      //Caso o valor seja inválido, a função será executada novamente permitindo que o usuário coloque um novo valor.
+      fazCafe();
+  }
 }
- */
+
+//Executando a função criada ------------
+fazCafe(); */
 
 //!Exemplo do Leo com ternary operator
 
@@ -153,7 +158,7 @@ console.log(
 
 //! Escolha dos pilotos ---------------------------------------------------
 //                0         1         2          3         4         5
-const nomes = ['slider', 'jester', 'stinger', 'goose', 'iceman', 'maverick'];
+/* const nomes = ['slider', 'jester', 'stinger', 'goose', 'iceman', 'maverick'];
 const velocidades = [75, 89, 76, 75, 98, 90];
 
 // Recebendo a escolha do jogador através de uma entrada com prompt
@@ -196,3 +201,4 @@ if (velocidadeJogador == velocidadeComputador) {
     `${mensagem}\n\nO piloto escolhido pelo computador possui uma velocidade maior\nVitória Computador!`
   );
 }
+ */

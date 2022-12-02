@@ -88,11 +88,10 @@ for ([number, nome] of information) {
 }
 
 // 2 - Use a loop to calculate the average odd and log it to the console
+
 const oddsValues = Object.values(games.odds);
 let soma = 0;
-for (values of oddsValues) {
-  soma += values;
-}
+for (values of oddsValues) soma += values;
 console.log('\nMédia:', (soma / oddsValues.length).toFixed(2));
 
 /* 3 - Print the 3 odds to the console, but in a nice formatted way, exactly like this: 
